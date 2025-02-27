@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_21",
+  "package": "net.phazoganon.phantomoverhaul.mixin",
+  "refmap": "mixins.phantomoverhaul.refmap.json",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "entity.PhantomMixin"
+  ]
+}
