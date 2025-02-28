@@ -9,5 +9,8 @@
   },
   "mixins": [
     "entity.PhantomMixin"
+  ],
+  "client": [
+    "entity.PhantomRendererMixin"
   ]
 }
