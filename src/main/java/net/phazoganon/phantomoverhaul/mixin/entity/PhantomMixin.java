@@ -1,12 +1,7 @@
 package net.phazoganon.phantomoverhaul.mixin.entity;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.minecraft.client.Camera;
-import net.minecraft.client.particle.Particle;
-import net.minecraft.client.particle.ParticleRenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
@@ -31,6 +26,7 @@ public abstract class PhantomMixin extends FlyingMob implements Enemy {
     protected PhantomMixin(EntityType<? extends FlyingMob> p_20806_, Level p_20807_) {
         super(p_20806_, p_20807_);
     }
+    /*
     @Override
     public void tick() {
         super.tick();
@@ -48,6 +44,7 @@ public abstract class PhantomMixin extends FlyingMob implements Enemy {
             this.level().addParticle(ParticleTypes.WHITE_ASH, this.getX()-(double)f3, this.getY()+(double)f5, this.getZ()-(double)f4, 0.0, 0.0, 0.0);
         }
     }
+    */
     @Inject(method = "shouldDespawnInPeaceful", at = @At(value = "RETURN"), cancellable = true)
     private void shouldDespawnInPeacefulChange(CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(false);
